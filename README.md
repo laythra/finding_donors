@@ -28,7 +28,7 @@ what one-hot encoding basically does is that it converts categorical variables (
 our model will be expecting the input to be numeric.
 
 Here is an example of one-hot encoding
-![alt text]()
+![alt text](https://github.com/laythra/finding_donors/blob/master/images/one-hot%20encoding.png)
 
 #### Splitting our data into testing and training sets.
 Splitting our data is extremely important, since we need to have a subset of our data that our model has never seen before in order to test the performance of this model seeing how well our model on these never seen before data points, i use the 'train_test_split' function provided by the sklearn module to do this job.
@@ -49,7 +49,7 @@ The first approach i try is making a naive model that always assumes that a pers
 In this step, i start implementing more models, and discuss each model's advantages and disadvantages, the models i will be using are **Decision Tree**, **Support Vector Machine** and **K-nearest neighbors (KNN)**
 
 I trained each model using our training set and tested it using the testing set, after that i did some visualization to get a better grasp of how our models performed
-![alt text]()
+![alt text](https://github.com/laythra/finding_donors/blob/master/images/Visualization.png)
 
 I ended with the conclusion that Decision Trees would work best for our data as you will be able to see in the project file.
 
@@ -73,18 +73,16 @@ Which are pretty good, specially if we compare these scored to our first naive m
 
 ### Extracting Feature Importance
 Using the **feature_importance_** our Decision Tree classifier module has, we can rank the importance of each of our 13 features that we have in our dataset.
-![alt text]()
+![alt text](https://github.com/laythra/finding_donors/blob/master/images/Visualization%20-%202.png)
 
 after that we fit our Decision Tree classifier with a subset of our dataset, which contains only the 5 most important features in our dataset as seen in the picture above, then we compare the scores we get from this model with the previous model that was trained using all of the 13 features, here are the results we end up with:
 
 
-Final Model trained on full data
-------
+# Final Model trained on full data
 Accuracy on testing data: 0.8408
 F-score on testing data: 0.6792
 
-Final Model trained on reduced data
-------
+# Final Model trained on reduced data
 Accuracy on testing data: 0.8399
 F-score on testing data: 0.6807
 
